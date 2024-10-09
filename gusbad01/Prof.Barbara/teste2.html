@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post de Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeçalho Estilo Facebook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+
+    <div class="status-box">
+        <div class="user-profile">
+            <img src="user-avatar.png" alt="Foto de Perfil" class="profile-pic">
+            <input id="postContent" placeholder="No que você está pensando...">
+        
+        </div>
+
+        <div class="options">
+            <div class="option">
+                <img src="live-video-icon.png" alt="Vídeo ao Vivo" class="option-icon">
+                <span>Vídeo ao Vivo</span>
+            </div>
+
+
+             <div class="option" onclick="document.getElementById('postImage').click();">
+                <img src="photo-video-icon.png" alt="Foto/Video" class="option-icon">
+                <span>Foto/Video</span>
+                <input type="file" id="postImage" accept="image/*" style="display: none;" onchange="updateImagePreview()">
+             </div>
+            <div id="imagePreview" class="image-preview"></div>
+
+
+            <div class="option">
+                <img src="feeling-icon.png" alt="Sentimento/Atividade" class="option-icon">
+                <span>Sentimento/Atividade</span>
+            </div>
+        </div>
+             
+               
+            </div>
+           
+        
+        <button onclick="post()">Publicar</button>
+       
+<div class="mostraResultado">
+    <div id="feed">
+</div>
+   
+    
+</main>
+<script src="teste2.js"></script>
+</body>
+</html>

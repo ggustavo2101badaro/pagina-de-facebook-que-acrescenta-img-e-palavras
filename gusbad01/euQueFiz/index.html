@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página do facebook</title>
+    <box-icon type="solid" name="camera-movie"></box-icon>
+    <box-icon name="videos" type="solid" color="#625858"></box-icon>
+    <box-icon type="solid" name="video-plus"></box-icon>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+
+
+    <div class="container">
+      <section class="header">
+        <h2>facebook</h2>
+      </section>
+      <hr/>
+      <form id="formulario" class="formulario">
+        <div class="formulario-content">
+          <!--<label for="" ></label>-->
+          <input
+          id="postContent"
+            type="text"
+            id="userName"
+            placeholder="No que você está pensando?"
+            maxlength="300"
+          />
+      <!--   <a>Coloque um assunto para que seja possível a publicação.</a> -->
+        </div>
+
+        <div class="caixa-img">
+
+          <div  class="option" onclick="document.getElementById('postImage').click();" >
+          
+            <ul>
+
+            <li>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAcVJREFUSEvVlU1rE1EUhp9zh0J2tgu1KK0oiCvBpSv3unEVc2kEJ1HEndmV7tSF4MIfINSZQEhzh6wE8QcIrgVXIgjWL/ATdTVQZ45M6IS0pvkyKTi7y7nv+5xz7jmMMONPZuzP/gL8YnHReN46cBaIgaepyJ16q/XSL5dPmyRZA84BBeCZJsm1sN3+MqgL3Qq2zZ8Di7sE3wSuKDSBA7ti7yRJzjxst7/vBekCrlrbULgs8EhUs0xJRe4D53Nxv5iqPgij6MZQQNXaD8CRrbm5w41G43MmqK6snCBNX+fifjGFt6Fzx0YBfAIOGc9bWm8232eC68Xi8m/P28zFe8S+Bs4dHAUQAZeyNmiSrGJMQeCuilzobdFfMZEwaLWqQwEVa0sCboK9+KWq5TCKHvfTdh+5au0r4OQEgEzyMXDu6DCATmjekQXOdZL1fX/exHEtcO5Wdu6t4J8AaaGwYOL4Jqo1ROZz4NQAwM/eRZwFYEeH/0vAbaCWt2nqFWSG2xPUeeggihamOkV5xvmo1uv1HzsAFWs3BZYn3IU3gXPHBy5apVS6KMbcQ/XUmJAXqTFr9Y2NJwMBY5qOfH1//8kjpzXGxT/y8r8ZCeipBAAAAABJRU5ErkJggg=="
+              />Foto-Vídeo
+
+              <input
+                type="file"
+                id="postImage"
+                accept="image/"
+                style="display: none"
+                onchange="atualizarImagem()"/>
+
+            </li>
+
+          </ul>
+          <div id="ImagePreview" class="ImagePreview"></div>
+
+        </div>
+     
+
+       
+        </div>
+
+        
+
+        <div>
+          <ul class="option">
+            <li>
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQBJREFUSEvFljEOgkAQRf8QTkBHbyLRS1BqLwl0ihV3sKAwsfQGWELhdTSx9SJjQJYQZIEFNtLB7vw382eZLEHzQ5r1IQUcfH9HRGcwL5WSIHox8+mWZfc8TgoIg+AB5pWSuNhM9EzSdN0N8H0eJV4GJVlWJC+v4B8AItoy8xWA01fdqAryoNh1zbdtR2COAVgy0A8gLC0RC+K9LiDW8m9Hz7PYMGIQRQDMJmgyQAjug8AxvrZt2pKpmqxagXaANou0NnnSMR3Sg76zP7nJ8wLmHnZNi4pxDVwALFQyh2xcNwFKoh2bpT/a/ICRntfnU1tSVQVjPR8MmMuSpo72W8UHeOK4GW0tNcoAAAAASUVORK5CYII="
+              />
+              Sentimento-Atividade
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPRJREFUSEtjZKAxYKSx+QyjFhAMYXgQJUZEhDAyMrYw/P+vTlAXsgJGxpv///+vmb9ixRps+uAWJEVGXmX4/1+LJMNhihkZr81bvlwbvwUREf/JMhyqad6KFWDHNjg4sDySkJg8b8WKTBAf4QM8FsA0JxFQExcXJ8zy69cmBgYGK5geqlnAyMBg9J+BYSMDA4MsyOVUt4CBgeE7AwMDJyyYCVoAU4ArXvAFF1E+oLkFyC4nJpJJDiJSLaB5JIN8SXYyJSYDomQ0SclZ85YvT0LNaLQuKsCFHQNDOwMDgwoxLoarIbawI8lQEhSP1mgEA4vmQQQAKyCGGa9LYiYAAAAASUVORK5CYII="
+              />Adaptado para storytelling
+            </li>
+          </ul>
+        </div>
+
+        <button  onclick="post()">Publicar</button>
+       
+       
+       <!-- <div id="feed"></div> -->
+      </form>
+     
+    </div>
+  <br><br><br><br>
+
+
+    <div id="feed"></div>
+
+  
+
+
+  </body>
+</html>
